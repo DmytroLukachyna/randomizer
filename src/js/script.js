@@ -27,19 +27,27 @@ function getRandomIntFromFields(from, to) {
 }
 
 function getRandomIntFromTicks() {
-    // var count = $('.random__number-tick').filter(':checked').size(),
+    let count = [].slice.call(document.querySelectorAll(".random__number-tick"))
+        .filter(function(e) { return e.checked; }).length,
+        ln = 0;
+    console.log(count);
+
+    // var count = $numbers.filter(':checked').size(),
     //     ara = [],
     //     r = 0,
     //     i = 0;
 
-    // $('.include_number').each(function() {
+    // $numbers.each(function() {
     //     var $this = $(this);
     //     if ($this.is(':checked')) {
     //         ara[i] = $this.val();
     //         i++;
     //     }
+
     // });
 
     // r = ara[getRandomInt(1, count) - 1];
+
     // return r;
+
 }
