@@ -29,6 +29,9 @@
     }
     &__range {
         margin-top: 20px;
+        &:last-of-type {
+            margin-top: 21px;
+        }
         &-field {
             width: 90px;
             height: 25px;
@@ -85,33 +88,3 @@
         font-size: 33px;
     }
 }
-
-
-/*		
-#page-caption {
-font-size: 40px;
-text-shadow: 0 1px 1px #fff;
-}
-
-.page-button:hover {
-background: -o-linear-gradient(top, #ffee66, #ff9922);
-background: -moz-linear-gradient(#ffee66, #ff9922);
-background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffee66), to(#ff9922));
-}
-
-#page-additional {
-font-style: italic;
-line-height: 25px;
-}
-
-#page-bottom-block {
-height: 50px;
-padding: 15px 0 1px;
-vertical-align: bottom;
-}
-
-#rand-number-block {
-padding: 5px;
-height: 205px;
-}
-*/

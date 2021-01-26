@@ -10,14 +10,11 @@ document.querySelector('.random__button-1').addEventListener("click", () => {
     let startNumber = +document.querySelector('.random__range-start').value,
         endNumber = +document.querySelector('.random__range-end').value,
         number = getRandomIntFromFields(startNumber, endNumber);
-
     document.querySelector('.random__result').textContent = number;
 });
 
 document.querySelector('.random__button-2').addEventListener("click", () => {
-    // Stuff
-    document.querySelector('.random__result').textContent = ';)';
-    // document.querySelector('.random__result').textContent = getRandomIntFromTicks();
+    document.querySelector('.random__result').textContent = getRandomIntFromTicks();
 });
 
 function getRandomIntFromFields(from, to) {
@@ -29,25 +26,15 @@ function getRandomIntFromFields(from, to) {
 function getRandomIntFromTicks() {
     let count = [].slice.call(document.querySelectorAll(".random__number-tick"))
         .filter(function(e) { return e.checked; }).length,
-        ln = 0;
-    console.log(count);
-
-    // var count = $numbers.filter(':checked').size(),
-    //     ara = [],
-    //     r = 0,
-    //     i = 0;
-
-    // $numbers.each(function() {
-    //     var $this = $(this);
-    //     if ($this.is(':checked')) {
-    //         ara[i] = $this.val();
-    //         i++;
-    //     }
-
-    // });
-
-    // r = ara[getRandomInt(1, count) - 1];
-
-    // return r;
-
+        arrayChecked = [],
+        result = 0,
+        i = 0;
+    document.querySelectorAll(".random__number-tick").forEach(e => {
+        if (e.checked == true) {
+            arrayChecked[i] = e.value;
+            i++;
+        }
+    });
+    result = arrayChecked[getRandomIntFromFields(1, count) - 1];
+    return result;
 }
