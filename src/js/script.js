@@ -25,7 +25,7 @@ function getRandomIntFromFields(from, to) {
 
 function getRandomIntFromTicks() {
     let count = [].slice.call(document.querySelectorAll(".random__number-tick"))
-        .filter(function(e) { return e.checked; }).length,
+        .filter(function(ticks) { return ticks.checked; }).length,
         arrayChecked = [],
         result = 0,
         i = 0,

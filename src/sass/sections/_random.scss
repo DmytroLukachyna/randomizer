@@ -74,12 +74,12 @@
     border: none;
     cursor: pointer;
     outline: none;
-    background: rgb(255, 170, 34);
+    background: rgb(255, 204, 41);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     font-size: 40px;
-    transition: all .1s ease-in-out;
+    transition: all .15s ease-in-out;
     &:hover {
-        background: rgb(255, 190, 64);
+        background: rgb(245, 134, 52);
     }
     &:active {
         transform: scale(.98);
