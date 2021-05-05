@@ -56,6 +56,42 @@
             margin: 0 5px;
             position: relative;
             bottom: -3px;
+            appearance: none;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                border: 1px solid rgb(245, 134, 52);
+                border-radius: 6px;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+            }
+            &:checked:before {
+                background: rgb(255, 204, 41);
+                border: 2px solid rgb(255, 204, 41);
+            }
+            &:after {
+                content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjc1MjIgMy4yMjc4MUMxMi40Mzc3IDIuOTI0MDYgMTEuOTM5MiAyLjkyNDA2IDExLjYyNDcgMy4yMjc4MUw1LjA2NzYgOS43ODQ4OEwyLjM5NTIzIDcuMTEyNUMyLjA4Mzg3IDYuNzkwMTEgMS41NzAwOSA2Ljc4MTIyIDEuMjQ3NzQgNy4wOTI1OEMwLjkyNTM1IDcuNDAzOTQgMC45MTY0NTggNy45MTc3MiAxLjIyNzgyIDguMjQwMDdDMS4yMzQzMyA4LjI0NjgyIDEuMjQwOTkgOC4yNTM0OCAxLjI0Nzc0IDguMjU5OTlMNC40OTM4NiAxMS41MDYxQzQuODEwNzQgMTEuODIyOSA1LjMyNDQ3IDExLjgyMjkgNS42NDEzNSAxMS41MDYxTDEyLjc3MjIgNC4zNzUyNUMxMy4wODM2IDQuMDUyOTEgMTMuMDc0NiAzLjUzOTE3IDEyLjc1MjIgMy4yMjc4MVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+                height: 14px;
+                width: 14px;
+            }
+            &:checked:after {
+                opacity: 1;
+            }
         }
         &-label {
             cursor: pointer;
