@@ -28,13 +28,19 @@ function getRandomIntFromTicks() {
         .filter(function(e) { return e.checked; }).length,
         arrayChecked = [],
         result = 0,
-        i = 0;
-    document.querySelectorAll(".random__number-tick").forEach(e => {
-        if (e.checked == true) {
-            arrayChecked[i] = e.value;
+        i = 0,
+        blank = '😉';
+    document.querySelectorAll(".random__number-tick").forEach(tick => {
+        if (tick.checked == true) {
+            arrayChecked[i] = tick.value;
             i++;
         }
     });
-    result = arrayChecked[getRandomIntFromFields(1, count) - 1];
-    return result;
+    if (arrayChecked.length !== 0) {
+        result = arrayChecked[getRandomIntFromFields(1, count) - 1];
+        return result;
+    } else {
+        return blank;
+    }
+
 }
