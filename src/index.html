@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рандомізатор чисел</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рандомизатор чисел</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
+  <body>
     <section class="random">
-        <div class="random__container">
-            <h1 class="random__title">
-                Случайное число:
-            </h1>
-            <p class="random__result">
-                12
-            </p>
-            <div class="random__text">
-                Выберите диапазон для нового случайного числа
-            </div>
-            <div class="random__wrapper random__wrapper_active">
-                <div class="random__range">
-                    от <input class="random__range-field random__range-start" type="number" value="1"> до <input class="random__range-field random__range-end" type="number" value="12">
-                </div>
-                <button class="button random__button-1">
-                    Сгенерировать
-                </button>
-            </div>
-            <div class="random__wrapper">
-                <div class="random__range">
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="1" checked="">1</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="2" checked="">2</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="3" checked="">3</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="4" checked="">4</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="5" checked="">5</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="6" checked="">6</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="7" checked="">7</label>
-                    <label class="random__number-label"><input type="checkbox" class="random__number-tick" value="8" checked="">8</label>
-                </div>
-                <button class="button random__button-2">
-                    Сгенерировать
-                </button>
-            </div>
-            <button class="button button_toggle">
-                Переключить тип ввода данных
-            </button>
+      <div class="random__container">
+        <h1 class="random__title">Випадкове число:</h1>
+        <p class="random__result">12</p>
+        <div class="random__text">Оберіть діапазон для нового випадкового числа</div>
+        <div class="random__wrapper random__wrapper_active">
+          <div class="random__range">
+            від <input class="random__range-field random__range-start" type="number" value="1" /> до
+            <input class="random__range-field random__range-end" type="number" value="12" />
+          </div>
+          <button class="button random__button-1">Згенерувати</button>
         </div>
+        <div class="random__wrapper">
+          <div class="random__range">
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="1" checked="" />1</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="2" checked="" />2</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="3" checked="" />3</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="4" checked="" />4</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="5" checked="" />5</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="6" checked="" />6</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="7" checked="" />7</label
+            >
+            <label class="random__number-label"
+              ><input type="checkbox" class="random__number-tick" value="8" checked="" />8</label
+            >
+          </div>
+          <button class="button random__button-2">Згенерувати</button>
+        </div>
+        <button class="button button_toggle">Змінити тип вводу даних</button>
+      </div>
     </section>
     <script src="js/script.min.js"></script>
-</body>
-
+  </body>
 </html>
