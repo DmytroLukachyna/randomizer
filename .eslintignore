@@ -1,0 +1,3 @@
+_templates/
+build/
+**/*.js

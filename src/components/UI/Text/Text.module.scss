@@ -1,0 +1,23 @@
+@import '../../../assets/styles/fonts.scss';
+
+.text {
+  user-select: none;
+  &.type {
+    &_title {
+      @include font-title;
+    }
+    // &_result {
+    //   @include font-result;
+    // }
+    // &_text {
+    //   @include font-text;
+    // }
+    // &_button {
+    //   @include font-button;
+    // }
+    // &_inherit {
+    //   @include font-inherit;
+    // }
+  }
+  @include text-align;
+}

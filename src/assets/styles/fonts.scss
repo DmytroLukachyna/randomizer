@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+%font-inter {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-style: normal;
+}
+
+%font-inter-400-regular {
+  @extend %font-inter;
+  font-weight: 400;
+}
+
+%font-inter-700-bold {
+  @extend %font-inter;
+  font-weight: 700;
+}
+
+@mixin font-title {
+  @extend %font-inter-700-bold;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+//// TEMPLATES
+
+// @include font-h1-bold;
+/* H1 Headline / Bold */
+
+@mixin text-align {
+  &.text-align {
+    &_center {
+      text-align: center;
+    }
+    &_left {
+      text-align: left;
+    }
+    &_right {
+      text-align: right;
+    }
+    &_justify {
+      text-align: justify;
+    }
+  }
+}
