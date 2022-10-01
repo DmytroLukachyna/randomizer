@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  &.gap {
+    &_8 {
+      gap: 8px;
+    }
+    &_20 {
+      gap: 20px;
+    }
+  }
+}
