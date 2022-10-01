@@ -1,1 +1,1 @@
-https://dmytrolukachyna.github.io/projects/randomizer/
+https://dmytrolukachyna.pp.ua/projects/pet/randomizer/
