@@ -15,10 +15,26 @@
   font-weight: 700;
 }
 
+@mixin font-clear {
+  @extend %font-inter-400-regular;
+}
+
 @mixin font-title {
   @extend %font-inter-700-bold;
   font-size: 32px;
   line-height: 38px;
+}
+
+@mixin font-result {
+  @extend %font-inter-400-regular;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@mixin font-text {
+  @extend %font-inter-400-regular;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 //// TEMPLATES

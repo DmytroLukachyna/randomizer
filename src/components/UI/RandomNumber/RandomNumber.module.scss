@@ -1,0 +1,11 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 36px;
+  }
+  .number {
+    font-size: 120px;
+  }
+  // gap: 12px;
+}

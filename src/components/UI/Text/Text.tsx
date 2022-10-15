@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import style from './Text.module.scss';
 
 export interface TextProps {
-  type?: 'title' | 'result' | 'text' | 'button' | 'inherit';
+  type?: 'title' | 'result' | 'text' | 'button' | 'inherit' | 'font';
   textAlign?: 'left' | 'center' | 'right' | 'justify';
   className?: string;
   children?: ReactNode;
@@ -15,6 +15,7 @@ const mapping = {
   text: 'span',
   button: 'span',
   inherit: 'span',
+  font: 'span',
 };
 
 const Text: React.FC<TextProps> = ({

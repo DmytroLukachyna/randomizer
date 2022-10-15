@@ -1,57 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ContainerMain } from 'components/UI/ContainerMain';
 import { Checkbox } from 'components/UI/Checkbox';
 import { Container } from 'components/UI/Container';
 import { Button } from 'components/UI/Button';
-import useSelect from 'hooks/useSelect';
 import { Input } from 'components/UI/Input';
 import { Text } from 'components/UI/Text';
-
-type Mode = 'input' | 'checkbox';
+import useCalculateValue from 'hooks/useCalculateValue';
+import { RandomNumber } from 'components/UI/RandomNumber';
 
 const App: React.FC = () => {
-  const [result, setResult] = useState<number>();
-  const [mode, setMode] = useState<Mode>('checkbox');
-  const setModeHandler = () => {
-    if (mode === 'checkbox') {
-      setMode('input');
-    } else {
-      setMode('checkbox');
-    }
-  };
-  const { selected, handleSelect, handleUnselect } = useSelect<number | string>([
-    0, 1, 2, 3, 4, 5, 6, 7,
-  ]);
-  const handleToggle = (id: string | number) => () => {
-    if (selected.includes(id)) handleUnselect(id);
-    else handleSelect(id);
-  };
-  const [startValue, setStartValue] = useState('1');
-  const [endValue, setEndValue] = useState('12');
-  const startInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setStartValue(event.target.value);
-  };
-  const endInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEndValue(event.target.value);
-  };
-  const updateResult = () => {
-    if (mode === 'checkbox') {
-      setResult(() => +selected[Math.floor(Math.random() * selected.length)] + 1);
-    }
-    if (mode === 'input') {
-      if (startValue >= endValue) {
-        setResult(Math.floor(Math.random() * (+startValue - +endValue + 1) + +endValue));
-      } else {
-        setResult(Math.floor(Math.random() * (+endValue - +startValue + 1) + +startValue));
-      }
-    }
-  };
-  useEffect(() => updateResult(), [selected, startValue, endValue]);
+  const {
+    result,
+    mode,
+    handleMode,
+    handleToggle,
+    selected,
+    startValue,
+    endValue,
+    startInputHandler,
+    endInputHandler,
+    updateResult,
+  } = useCalculateValue();
+  const notRandom =
+    (mode === 'input' && startValue === endValue) || (mode === 'checkbox' && selected.length < 2);
   return (
     <ContainerMain>
-      <Text type="title">Рандомизатор</Text>
+      <Text type="title">Randomizer</Text>
+      <RandomNumber randomNumber={result} notRandom={notRandom} />
       {mode === 'checkbox' && (
-        <Container gap="8">
+        <Container gap="8" wrap justifyContent="center">
           {Array.from(Array(8)).map((_, index) => (
             <Checkbox
               key={index}
@@ -65,15 +42,17 @@ const App: React.FC = () => {
         </Container>
       )}
       {mode === 'input' && (
-        <Container gap="8">
-          <Input value={startValue} onChange={startInputHandler} />
-          <Input value={endValue} onChange={endInputHandler} />
+        <Container gap="8" alignItems="center">
+          <Text>from</Text>
+          <Input value={startValue.toString()} onChange={startInputHandler} />
+          <Text>to</Text>
+          <Input value={endValue.toString()} onChange={endInputHandler} />
         </Container>
       )}
-      <h2>Случайное число: {result || '😉'}</h2>
-      <Container gap="20">
-        <Button onClick={updateResult}>Обновить</Button>
-        <Button onClick={setModeHandler}>Сменить режим</Button>
+      <Text type="result"></Text>
+      <Container gap="20" wrap justifyContent="center" alignItems="center">
+        <Button onClick={updateResult}>Update</Button>
+        <Button onClick={handleMode}>Change mode</Button>
       </Container>
     </ContainerMain>
   );

@@ -1,6 +1,10 @@
+@import '../../../assets/styles/fonts.scss';
+
 .wrapper {
+  @extend %font-inter;
   display: inline-flex;
   align-items: center;
+  height: 32px;
   & .label {
     display: flex;
     margin-left: 4px;

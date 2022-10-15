@@ -8,4 +8,80 @@
       gap: 20px;
     }
   }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.justify-content {
+    &_center {
+      justify-content: center;
+    }
+    &_start {
+      justify-content: start;
+    }
+    &_end {
+      justify-content: end;
+    }
+    &_flex-start {
+      justify-content: flex-start;
+    }
+    &_flex-end {
+      justify-content: flex-end;
+    }
+    &_left {
+      justify-content: left;
+    }
+    &_right {
+      justify-content: right;
+    }
+    &_baseline {
+      justify-content: baseline;
+    }
+    &_space-between {
+      justify-content: space-between;
+    }
+    &_space-around {
+      justify-content: space-around;
+    }
+    &_space-evenly {
+      justify-content: space-evenly;
+    }
+    &_stretch {
+      justify-content: stretch;
+    }
+    &_inherit {
+      justify-content: inherit;
+    }
+    &_initial {
+      justify-content: initial;
+    }
+    &_unset {
+      justify-content: unset;
+    }
+  }
+  &.align-items {
+    &_flex-start {
+      align-items: flex-start;
+    }
+    &_flex-end {
+      align-items: flex-end;
+    }
+    &_center {
+      align-items: center;
+    }
+    &_baseline {
+      align-items: baseline;
+    }
+    &_stretch {
+      align-items: stretch;
+    }
+    &_inherit {
+      align-items: inherit;
+    }
+    &_initial {
+      align-items: initial;
+    }
+    &_unset {
+      align-items: unset;
+    }
+  }
 }

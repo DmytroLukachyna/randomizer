@@ -1,7 +1,10 @@
+@import '../../../assets/styles/fonts.scss';
+
 .button {
+  @extend %font-inter;
   display: flex;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
   font-size: 40px;
   padding: 12px;
   border-radius: 16px;
