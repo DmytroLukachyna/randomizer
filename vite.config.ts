@@ -8,7 +8,6 @@ import { resolve } from "node:path";
 const src = (dir: string) => resolve(import.meta.dirname, `src/${dir}`);
 
 export default defineConfig({
-  base: "/projects/pet/randomizer/",
   plugins: [react()],
   resolve: {
     alias: {

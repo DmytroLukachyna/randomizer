@@ -3,6 +3,7 @@
 
 # production
 dist
+.wrangler
 
 # misc
 .DS_Store
