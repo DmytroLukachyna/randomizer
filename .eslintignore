@@ -1,3 +1,4 @@
-_templates/
-build/
+dist/
 **/*.js
+**/*.cjs
+.env

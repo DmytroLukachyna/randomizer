@@ -1,4 +1,4 @@
-@import "../../../assets/styles/fonts.scss";
+@use "../../../assets/styles/fonts" as *;
 
 .wrapper {
   @extend %font-inter;

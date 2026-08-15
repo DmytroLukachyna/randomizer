@@ -1,58 +1,42 @@
 {
   "name": "randomizer",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "private": true,
+  "type": "module",
   "homepage": "/projects/pet/randomizer/",
-  "dependencies": {
-    "@types/node": "^18.11.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "classnames": "^2.3.2",
-    "eslint": "^8.25.0",
-    "node-sass": "^7.0.3",
-    "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "^5.0.1",
-    "sass-loader": "^13.1.0",
-    "typescript": "^4.8.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss,md,json}' --config ./.prettierrc",
-    "new:component": "hygen new component",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --quiet --fix",
+    "format": "prettier --write '**/*.{ts,tsx,css,scss,md,json}'",
     "name": "git log -1 --pretty=%B",
     "commit": "git add . && git commit -m"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "normalize.css": "^8.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.40.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "hygen": "^6.2.11"
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.9.6",
+    "sass": "^1.102.0",
+    "typescript": "^5.7.3",
+    "vite": "^8.2.1"
   }
 }
